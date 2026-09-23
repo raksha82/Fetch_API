@@ -15,28 +15,36 @@
 
     <h3>Add Products</h3>
     <div class="form-container">
-        <input type="text" id="title" placeholder="Product Title">
-        <input type="number" id="price" placeholder="Price">
-        <input type="url" id="img" placeholder="Image">
+        <input type="text" autofocus required id="title" placeholder="Product Title">
+        <input type="number" required id="price" placeholder="Price">
+        <input type="text" required id="description" placeholder="Description">
+        <input type="url" required id="img" placeholder="Image URL">
+        <input type="text" required id="category" placeholder="Category">
         <button onclick="addProduct()">Add Product</button>
     </div>
 
     <h3>Get Products</h3>
     <div class="form-container">
-        <input type="number" id="getid" placeholder="Enter the id" max="20">
+        <input type="number" id="getid" placeholder="Enter the id" >
         <button onclick="getProduct()">Get Product</button>
+        <p id="errormsg"></p>
+        <div id="getProducts">
+
+        </div>
     </div>
 
     <h3>Delete Products</h3>
     <div class="form-container">
-        <input type="number" id="deleteid" max="20" placeholder="Enter the id">
+        <input type="number" id="deleteid"  placeholder="Enter the id">
         <button onclick="deleteProduct()">Delete Product</button>
+        <p id="errormsgdel"></p>
     </div>
 
     <h3> <button onclick="reset()">Reset</button></h3>
    
 
     <div id="products">
+        
     </div>
 
     <script src="script.js"></script>
